@@ -1,0 +1,15 @@
+def ReverseComplement(Pattern):     
+    Pattern = Reverse(Pattern) 
+    Pattern = Complement(Pattern)
+    return Pattern
+
+def Reverse(Pattern):
+    Rev_Pattern = Pattern[::-1]
+    return Rev_Pattern
+
+def Complement(Pattern):
+    basepairs = {'A':'T', 'T':'A', 'C':'G', 'G':'C'}
+    complement = ''
+    for base in Pattern:
+        complement += basepairs.get(base)
+    return complement
